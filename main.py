@@ -1,11 +1,15 @@
-from deck import newTransformationCard, setupCards
+from setup import setupCards, newPlayerCard, newFunctionCard
 from sympy import *
 
 WINNING_SCORE = 50
-STARTING_CARDS = 5
+MAX_FUNCTION_CARDS = 5
+MAX_PLAYER_CARDS = 5
+MAX_TRANSFORMATION_CARDS = 5
+MAX_SOLVE_CARDS = 5
+NUM_PLAYERS = 2
 
 #active cards
-activeFuntions, activeTransformations, playerCards, solveCards = setupCards()
+activeFuntions, activeTransformations, playerCards, solveCards = setupCards(MAX_FUNCTION_CARDS, MAX_TRANSFORMATION_CARDS, MAX_SOLVE_CARDS, MAX_PLAYER_CARDS, NUM_PLAYERS)
 
 def initCards():
   cards = []
